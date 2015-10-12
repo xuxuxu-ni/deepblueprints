@@ -1,4 +1,4 @@
-sails-hook-deepblueprints is sails [hook](http://sailsjs.org/documentation/concepts/extending-sails/hooks), provide more than two layer level which is provided by [blueprints](http://sailsjs.org/documentation/reference/blueprint-api?q=blueprint-routes) in sails [native hook](https://github.com/balderdashy/sails/tree/master/lib/hooks/blueprints)  
+sails-hook-deepblueprints is sails [hook](http://sailsjs.org/documentation/concepts/extending-sails/hooks), provide more than two layer level route which is provided by [blueprints](http://sailsjs.org/documentation/reference/blueprint-api?q=blueprint-routes) in sails [native hook](https://github.com/balderdashy/sails/tree/master/lib/hooks/blueprints)  
 
 ## Features
 
