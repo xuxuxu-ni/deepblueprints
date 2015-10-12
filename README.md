@@ -7,7 +7,9 @@ sails-hook-deepblueprints is sails [hook](http://sailsjs.org/documentation/conce
     like: if team id 2 is not belong to company id 1, then will return 400 error
 
 ## Installation
-`npm install sails-hook-deepblueprints`
+install in sails project
+
+`npm install sails-hook-deepblueprints --save`
 
 ## Usage
 
