@@ -10,7 +10,10 @@
     "name": "7372@163.com"
   },
   "license": "MIT",
-  "repository" : "",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/harry/deep-blueprint.git"
+  },
   "dependencies": {
     "async": "^1.0.0",
     "lodash": "^2.4.2",
