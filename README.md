@@ -33,7 +33,7 @@ install in sails project
 
 ## Example
 
-[here](https://github.com/hcnode/deep-blueprints-sample) is completely sample
+[here](https://github.com/hcnode/deep-blueprints-sample) is complete sample
 
 here are 4 models below, and they have One-to-many associations of one and the next one.
 
