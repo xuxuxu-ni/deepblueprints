@@ -172,39 +172,39 @@ populate: get %s/:parentid/%s/:id?
  
  * because deep-blueprints will find the associations and create the route, so avoid circle routes, DON'T DEFINE TWO-WAY associations in two models like:
 
-    ```javascript
-    /**
-    * Company.js
-    */
-    module.exports = {
-    
-      attributes: {
-        name : "string",
-        team:{
-          collection: 'team'
-        }
-      }
-    };
-    ```
-    
-    ```javascript
-    /**
-    * Team.js
-    */
-    module.exports = {
-    
-      attributes: {
-        name : "string",
-        company : {
-            model : 'company'
-        },
-        project : {
-          collection: 'project'
-        }
-      }
-    };
-    
-    ```
+```javascript
+/**
+* Company.js
+*/
+module.exports = {
+
+  attributes: {
+    name : "string",
+    team:{
+      collection: 'team'
+    }
+  }
+};
+```
+
+```javascript
+/**
+* Team.js
+*/
+module.exports = {
+
+  attributes: {
+    name : "string",
+    company : {
+        model : 'company'
+    },
+    project : {
+      collection: 'project'
+    }
+  }
+};
+
+```
 
 ## Test
 in [deep-blueprints sample](https://github.com/hcnode/deep-blueprints-sample), clone repo and run npm test
