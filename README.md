@@ -86,24 +86,6 @@ module.exports = {
 
 ```
 
-
-```javascript
-/**
-* Project.js
-*/
-
-module.exports = {
-
-  attributes: {
-    name : "string",
-    todolist : {
-      collection: 'todolist'
-    }
-  }
-};
-
-```
-
 ```javascript
 /**
 * Todolist.js
