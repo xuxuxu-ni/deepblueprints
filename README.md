@@ -144,31 +144,32 @@ populate: get %s/:parentid/%s/:id?
 ## Notice
  * the association attribute name in the model should EXACTLY same as the associate model's name, like :
  
- ```javascript
- /**
- * Company.js
- */
- module.exports = {
- 
-   attributes: {
+```javascript
+/**
+* Company.js
+*/
+module.exports = {
+
+    attributes: {
      name : "string",
      team:{ // team is OK, teams is NOT OK
        collection: 'team'
      }
-   }
- };
- 
- ```javascript
- /**
- * Team.js
- */
- module.exports = {
- 
-   attributes: {
+    }
+};
+```
+
+```javascript
+/**
+* Team.js
+*/
+module.exports = {
+
+    attributes: {
      name : "string"
-   }
- };
- ```
+    }
+};
+```
  
  * because deep-blueprints will find the associations and create the route, so avoid circle routes, DON'T DEFINE TWO-WAY associations in two models like:
 
