@@ -142,7 +142,7 @@ populate: get %s/:parentid/%s/:id?
 ```
 
 ## Notice
- * the association attribute name in the model should EXACTLY same as the associate model's name, like :
+ * the association attribute name in the model should be EXACTLY same as the associate model's name, like :
  
 ```javascript
 /**
