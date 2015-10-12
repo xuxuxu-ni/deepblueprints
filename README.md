@@ -1,17 +1,17 @@
-sails-hook-deepblueprints is sails [hook](http://sailsjs.org/documentation/concepts/extending-sails/hooks), provide more than two layer level [blueprints](http://sailsjs.org/documentation/reference/blueprint-api?q=blueprint-routes) which inside sails [native hook](https://github.com/balderdashy/sails/tree/master/lib/hooks/blueprints)
+sails-hook-deepblueprints is sails [hook](http://sailsjs.org/documentation/concepts/extending-sails/hooks), provide more than two layer level which is provided by [blueprints](http://sailsjs.org/documentation/reference/blueprint-api?q=blueprint-routes) in sails [native hook](https://github.com/balderdashy/sails/tree/master/lib/hooks/blueprints)  
 
 ## Features
 
  * generate more than two layer route like `/deep/company/1/team/2/project/3`
  * validate association between each layer in route path
-    if team id 2 is not belong to company id 1, then will return 400 error
+    like: if team id 2 is not belong to company id 1, then will return 400 error
 
 ## Installation
 `npm install sails-hook-deepblueprints`
 
 ## Usage
 
- * put config `deepBluePrint : true` into controller
+ * put config `deepBluePrint : true` into controller which one you want it have deep blueprint routes
 
     ```javascript
     /**
@@ -27,13 +27,13 @@ sails-hook-deepblueprints is sails [hook](http://sailsjs.org/documentation/conce
       }
     };
     ```
- * after sails start, there will auto generate deep-blueprints' route with the prefix in the path: /deep
+ * after sails start, there will auto generate deep-blueprints' routes with the prefix in the path: /deep
 
 ## Example
 
 [here](https://github.com/hcnode/deep-blueprints-sample) is completely sample
 
-here are 4 models below, and they have One-to-many associations one and the next one.
+here are 4 models below, and they have One-to-many associations of one and the next one.
 
 ```javascript
 /**
@@ -115,7 +115,7 @@ module.exports = {
 };
 ```
 
-after sails start, there will generate the deep-blueprints routes(these can see the sails logs when log level is silly):
+after sails start, there will generate the deep-blueprints routes(these can see in the sails logs when log level is silly):
 
 ```bash
 silly: Binding RESTful deepblueprint/shadow routes for model+controller: company
@@ -148,7 +148,7 @@ silly: Binding route ::  get /deep/company/*/team/*/project/:parentid/todolist/:
 silly: Binding route ::  get /deep/company/*/team/*/project/:parentid/todolist/:id? (ACTION: company/_config)
 ```
 
-when the request path match these routes, deep-blueprints will take data processing job and in it is way, mostly like the blueprints do:
+when the request path match these routes, deep-blueprints will take the data processing job and in it is way, mostly like the blueprints do:
 
 ```
 add: post %s/:parentid/%s/:id?
@@ -158,7 +158,7 @@ populate: get %s/:parentid/%s/:id?
 ```
 
 ## Notice
-because deep-blueprints will find the associations and create the route, so DON'T DEFINE TWO-WAY associations in two models like:
+because deep-blueprints will find the associations and create the route, so avoid circle routes, DON'T DEFINE TWO-WAY associations in two models like:
 
 ```javascript
 /**
