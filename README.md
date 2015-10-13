@@ -1,8 +1,10 @@
-sails-hook-deepblueprints is sails [hook](http://sailsjs.org/documentation/concepts/extending-sails/hooks), provide more than two layer level route which is provided by [blueprints](http://sailsjs.org/documentation/reference/blueprint-api?q=blueprint-routes) in sails [native hook](https://github.com/balderdashy/sails/tree/master/lib/hooks/blueprints)  
+sails-hook-deepblueprints is sails [hook](http://sailsjs.org/documentation/concepts/extending-sails/hooks), provide more than two resources layers route which is provided by [blueprints](http://sailsjs.org/documentation/reference/blueprint-api?q=blueprint-routes) in sails [native hook](https://github.com/balderdashy/sails/tree/master/lib/hooks/blueprints)  
+
+[中文版介绍](http://hcnode.github.io/2015/10/13/sails-hook-deepblueprints/)
 
 ## Features
 
- * generate more than two layer route like `/deep/company/1/team/2/project/3`
+ * generate more than two resource layers route like `/deep/company/1/team/2/project/3`
  * validate association between each layer in route path
     like: if team id 2 is not belong to company id 1, then will return 400 error
 
